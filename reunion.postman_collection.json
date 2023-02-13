@@ -1,0 +1,397 @@
+{
+	"info": {
+		"_postman_id": "4dc99997-8f60-40dd-bd6a-9ce8869dc1e4",
+		"name": "reunion",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11919513"
+	},
+	"item": [
+		{
+			"name": "User Details",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2Nzg4MTQ5OTJ9.Re_8j6Isj_RWnN9Qb1qYriFq7nfwz5n4d0LD5UXntLQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://20.219.116.72/api/user",
+					"protocol": "http",
+					"host": [
+						"20",
+						"219",
+						"116",
+						"72"
+					],
+					"path": [
+						"api",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Authenticate User (Register + Login)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"Email\":\"rew@gmail.com\", \"Password\":\"rew\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://20.219.116.72/api/authenticate",
+					"protocol": "http",
+					"host": [
+						"20",
+						"219",
+						"116",
+						"72"
+					],
+					"path": [
+						"api",
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Follow User",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2Nzg4MTQ5OTJ9.Re_8j6Isj_RWnN9Qb1qYriFq7nfwz5n4d0LD5UXntLQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://20.219.116.72/api/follow/2",
+					"protocol": "http",
+					"host": [
+						"20",
+						"219",
+						"116",
+						"72"
+					],
+					"path": [
+						"api",
+						"follow",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Unfollow User",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2Nzg4MTQ5OTJ9.Re_8j6Isj_RWnN9Qb1qYriFq7nfwz5n4d0LD5UXntLQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://20.219.116.72/api/unfollow/2",
+					"protocol": "http",
+					"host": [
+						"20",
+						"219",
+						"116",
+						"72"
+					],
+					"path": [
+						"api",
+						"unfollow",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Post",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2Nzg4MTQ5OTJ9.Re_8j6Isj_RWnN9Qb1qYriFq7nfwz5n4d0LD5UXntLQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"Title\":\"test\", \"Description\":\"test\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://20.219.116.72/api/posts",
+					"protocol": "http",
+					"host": [
+						"20",
+						"219",
+						"116",
+						"72"
+					],
+					"path": [
+						"api",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FETCH ALL POST(s)",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2Nzg4MTQ5OTJ9.Re_8j6Isj_RWnN9Qb1qYriFq7nfwz5n4d0LD5UXntLQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://20.219.116.72/api/all_posts",
+					"protocol": "http",
+					"host": [
+						"20",
+						"219",
+						"116",
+						"72"
+					],
+					"path": [
+						"api",
+						"all_posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE POST",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2Nzg4MTQ5OTJ9.Re_8j6Isj_RWnN9Qb1qYriFq7nfwz5n4d0LD5UXntLQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://20.219.116.72/api/posts/2",
+					"protocol": "http",
+					"host": [
+						"20",
+						"219",
+						"116",
+						"72"
+					],
+					"path": [
+						"api",
+						"posts",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FETCH POST Details",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2Nzg4MTQ5OTJ9.Re_8j6Isj_RWnN9Qb1qYriFq7nfwz5n4d0LD5UXntLQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://20.219.116.72/api/posts/4",
+					"protocol": "http",
+					"host": [
+						"20",
+						"219",
+						"116",
+						"72"
+					],
+					"path": [
+						"api",
+						"posts",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Comment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2Nzg4MTQ5OTJ9.Re_8j6Isj_RWnN9Qb1qYriFq7nfwz5n4d0LD5UXntLQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"comment\":\"test\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://20.219.116.72/api/comment/4",
+					"protocol": "http",
+					"host": [
+						"20",
+						"219",
+						"116",
+						"72"
+					],
+					"path": [
+						"api",
+						"comment",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Like Post",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2Nzg4MTQ5OTJ9.Re_8j6Isj_RWnN9Qb1qYriFq7nfwz5n4d0LD5UXntLQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://20.219.116.72/api/like/4",
+					"protocol": "http",
+					"host": [
+						"20",
+						"219",
+						"116",
+						"72"
+					],
+					"path": [
+						"api",
+						"like",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Unlike Post",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2Nzg4MTQ5OTJ9.Re_8j6Isj_RWnN9Qb1qYriFq7nfwz5n4d0LD5UXntLQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://20.219.116.72/api/unlike/4",
+					"protocol": "http",
+					"host": [
+						"20",
+						"219",
+						"116",
+						"72"
+					],
+					"path": [
+						"api",
+						"unlike",
+						"4"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
